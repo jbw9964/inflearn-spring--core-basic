@@ -1,4 +1,4 @@
-package chapters.app;
+package sections;
 
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;

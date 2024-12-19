@@ -1,4 +1,4 @@
-package chapters.app;
+package sections;
 
 import org.junit.jupiter.api.*;
 import org.springframework.boot.test.context.*;

@@ -168,6 +168,27 @@ public class TestConfig {
 문제를 [`issue`](https://github.com/spring-projects/spring-framework/issues/34135) 로 물어본 상태이다.
 뭔가 새롭게 알게 된 내용이 있다면 추가하겠다.
 
+> ### ++ `AspectJTypeFilter` 에러 `update`
+>
+> 직접 `Spring-framework` 에 물어보니 이는 의도된 행동이라고 한다.
+> 나는 `AspectJ` 가 유명하니까 `이 패턴대로 정의해 사용하세요!` 라는 의도로 만들어진 줄 알았는데, `AspectJ 기능을 선택해 작동` 하기 위해 만들어졌다고 한다.
+>
+> 또한 `FilterType.ASPECTJ` 를 사용했을 때만 테스트가 실패해 생겼던 궁금증은 `Spring` 과 관련된 내용이 아니라 `Java`
+> 의 `Class loading` 과 관련된 내용이었다.
+>
+> 나는 이전에 `Java` `Compile` 시점에 바이트 코드 변환 뿐만 아니라, 필요한 클래스들의 `loading`, `linking` 까지 이루어진다고 생각했었다.
+> 하지만 알아보니 `Class loading`, `Linking` 은 런타임 시점에 이루진다 한다.
+>
+> `Java` 를 `C` 처럼 생각해버린 것이다.
+> 어느 부분에서 내가 잘못 생각했는지는 파악했지만, 이를 정확하게 정리하려면 `Java Class loading` 에 대한 공부가 필요할 것 같다. 더 깊게 들어가면 `JVM`
+> 자체까지 들어가야 될 수도 있을 것 같다.
+>
+> 지금 당장 공부할 계획은 없으므로 나중을 위해 관련 자료만 첨부하겠다.
+>
+> - [`JLS 12.2 : Loading of Classes and Interfaces`](https://docs.oracle.com/javase/specs/jls/se23/html/jls-12.html#jls-12.2)
+> - [`Inflearn 강의 : 더 자바, 코드를 조작하는 다양한 방법`](https://www.inflearn.com/course/the-java-code-manipulation)
+> - [`Fundamental of JVM and Class Loader in java - Java JVM과 Class Loader의 동작 과정 이해 - Bear's github.io`](https://brewagebear.github.io/fundamental-jvm-classloader/)
+
 ---
 
 ## Reference
